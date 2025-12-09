@@ -54,9 +54,6 @@ jobs:
           pip install -r requirements.txt
           pip install pytest-cov
 
-      - name: Descargar Modelos NLTK y spaCy
-        run: python scripts/download_nlp_resources.py
-
       - name: Run Tests with coverage
         run: pytest app/modules/ --ignore-glob='*selenium*' --cov=app --cov-report=xml --cov-report=html --cov-report=term-missing
 
