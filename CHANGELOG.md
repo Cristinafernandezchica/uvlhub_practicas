@@ -1,4 +1,10 @@
 
+## 3.6.1 (2025-12-11)
+
+### Fix
+
+- add continue-on-error to bump_version job
+
 ## 3.6.0 (2025-12-11)
 
 ### Feat
