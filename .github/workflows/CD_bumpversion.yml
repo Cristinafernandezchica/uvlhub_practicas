@@ -27,8 +27,9 @@ jobs:
         name: Create bump and changelog
         uses: commitizen-tools/commitizen-action@master
         with:
-          github_token: ${{ secrets.ADMIN_TOKEN }}  
+          github_token: ${{ secrets.ADMIN_TOKEN }}
           debug: true
+          no_raise: true
 
       - name: Print Version
         run: echo "Bumped to version ${{ steps.cz.outputs.version }}"
