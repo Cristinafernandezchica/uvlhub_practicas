@@ -1,4 +1,11 @@
 
+## 3.6.9 (2025-12-11)
+
+### Fix
+
+- change workflow bump
+- change extra required
+
 ## 3.6.8 (2025-12-11)
 
 ### Fix
