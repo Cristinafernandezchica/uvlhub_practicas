@@ -8,6 +8,7 @@ on:
 jobs:
   bump_and_release:
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
       - name: Skip if release commit
         run: |
@@ -15,21 +16,17 @@ jobs:
             echo "Skipping bump job for release commit"
             exit 0
           fi
-
       - name: Check out
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
           token: "${{ secrets.ADMIN_TOKEN }}"
-
       - id: cz
         name: Create bump and changelog
         uses: commitizen-tools/commitizen-action@master
         with:
           github_token: ${{ secrets.ADMIN_TOKEN }}
           debug: true
-          extra_requirements: "--no-raise"
-
       - name: Push changes and tags
         run: |
           git config user.name "github-actions[bot]"
@@ -39,7 +36,6 @@ jobs:
           else
             echo "No changes to push (no bump needed)."
           fi
-
       - name: Create GitHub Release
         if: ${{ steps.cz.outputs.version != '' }}
         uses: softprops/action-gh-release@v1
