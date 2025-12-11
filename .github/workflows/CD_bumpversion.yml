@@ -12,11 +12,10 @@ jobs:
     steps:
       - name: Skip if release commit
         run: |
-          if [[ "${{ github.event.head_commit.message }}" == chore\(release\):* ]]; then
+          if [[ "${{ github.event.head_commit.message }}" == 'chore(release):'* ]]; then
             echo "Skipping bump job for release commit"
             exit 0
           fi
-
 
       - name: Check out
         uses: actions/checkout@v3
@@ -36,7 +35,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # Solo push si Commitizen generó cambios (version/tag)
           if [[ -n "$(git status --porcelain)" ]]; then
             git push origin main --follow-tags
           else
