@@ -9,6 +9,13 @@ jobs:
   bump_version:
     runs-on: ubuntu-latest
     steps:
+      - name: Skip if release commit
+        run: |
+          if [[ "${{ github.event.head_commit.message }}" == 'chore(release):'* ]]; then
+            echo "Skipping bump job for release commit"
+            exit 0
+          fi
+
       - name: Check out
         uses: actions/checkout@v3
         with:
@@ -22,7 +29,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          cz bump --yes --changelog --no-raise
+          cz bump --yes --changelog || true
 
       - name: Push changes and tags
         run: |
