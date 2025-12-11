@@ -1,4 +1,10 @@
 
+## 3.6.7 (2025-12-11)
+
+### Fix
+
+- condition for skipping release commit in CI
+
 ## 3.6.6 (2025-12-11)
 
 ### Fix
