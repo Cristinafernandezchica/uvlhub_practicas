@@ -1,4 +1,11 @@
 
+## 3.6.0 (2025-12-11)
+
+### Feat
+
+- Remove GitHub Actions release workflow
+- update CD workflow to create GitHub release
+
 ## 3.5.0 (2025-12-11)
 
 ### Feat
