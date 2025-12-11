@@ -1,1 +1,464 @@
 
+## 3.2.0 (2025-12-11)
+
+### Feat
+
+- add GitHub Actions workflow for version bumping
+- create CHANGELOG.md
+- add Commitizen configuration in .cz.toml
+- Add deployment of coverage report to GitHub Pages
+- integrate Codecov for test coverage reporting
+- modify CI workflow for feature branches and coverage to test for the original repo
+- Implements Selenium grid in Docker env.
+- Add devcontainer config
+- Improves the naming of workflows
+- Add comments to workflows
+- Improves GH Actions
+- Check for outdated dependencies
+- Upgrades rosemary and requirements
+- First attempt to fix Rosemary
+- Changes Selenium webdriver to Firefox
+- Add rosemary zip <uvus>
+- Update rosemary
+- Update core and docker
+- Add dynamic scripts route in modules
+- Delete unnecessary route in flamapy module
+- Update scripts according to Python slim image
+- Refactor dataset, featuremodel, explore, hubfile, public
+- Improve GUI dataset files counter
+- Improve GUI with flama integration
+- Uncouple files in Hubfile
+- Update requirements
+- Update all docker images
+- First step to fix flamapybranch
+- added the ability to check the syntax of uvl models using flamapy, also, to translate the models to cnf and glencoe. Preliminray support for SAT opertations and WASM
+- First steps
+- Implement database seeder
+- Improve errors screen
+- Improve feature model view
+- Improved management of out-of-sync datasets
+- Improve view dataset GUI
+- Include cite to JSS paper
+- Add DOI mapping
+- Improve dataset url
+- Improve feature models counter
+- Improve performanc getting latest synchronized dataset
+- Improve performance in index
+- Show version number
+- Decoupling uploads_dir from init
+- Disable the webhook module in the Render deployment
+- Implement module:list command
+- Implement module ignore
+- use dataset form in /dataset/upload route
+- Rename blueprints to modules
+- create service for auth and implement rollback when create user and profile
+- Ending webhook
+- Improve webhook
+- Improve CI / CD
+- Improve CI / CD
+- Improve CI / CD
+- Improve CI / CD
+- Improve CI / CD
+- Improve CI / CD
+- Improve webhook
+- Implement webhook
+- First steps to webhook
+- Update dependencies
+- Improve DockerHub deployment
+- Improve view
+- Improve view
+- Improve Rosemary
+- Change init-db script
+- improve rosemary test
+- Improve rosemary make:module
+- Improve rosemary maek:module command
+- Improve CI/CD
+- Render deployment
+- Render deployment
+- Render deployment
+- Render deployment
+- Add env production example
+- Finishing Selenium
+- Finishing Selenium
+- Preparing Selenium
+- First steps with selenium
+- Improve Vagrantfile decoupling env variables
+- Improve rosemary locust
+- Big improve for Locust in Docker environment
+- Add locustfile for dataset
+- Locust for Vagrant environment
+- Locust for local environment
+- Locust for Docker environment
+- First steps with Locust
+- Fix working dir in Docker environment
+- Improve Vagrant
+- Vagrant deployment available
+- Rewrite README and remove docs
+- Update requirements
+- Implement Serializer
+- First steps to implement Generic API
+- Refactor chore
+- Upgrading requirements
+- Improve env and docker compose
+- Add Zenodo sync note in main
+- Add Zenodo sync note
+- Update requirements
+- First steps for wiki
+- Implement rosemary compose:env
+- Improve README
+- Implement rosemary route:list command
+- Implement Seeders
+- Implement rosemary clear:cache command
+- Update to Python 3.12
+- Implement rosemary db:console command
+- Implement rosemary db:migrate command
+- Improve rosemary db:reset command
+- Implement rosemary db:reset command
+- Add auth test
+- Improve test suite
+- Add 'test' folder to rosemary make:module command
+- Implement rosemary clear commands
+- Implement rosemary clear command
+- Implement rosemary coverage command
+- Implement rosemary linter
+- Implements rosemary test command
+- Implement first test in a module
+- Implement 'make:module' command in Rosemary
+- Implement Rosemary CLI
+- Improve nginx prod configuration
+- Improve nginx prod configuration
+- Improve deployment configuration
+- Add UVLHub DOIs
+- Change MySQL to MariaDB
+- Implements BaseRepository and BaseService
+- Improve code
+- Script for web container init
+- It does not work
+- Add modal alert in Authors
+- Add scripts folder
+- Create Scripts folder
+- add copy button and download button in the uvl preview text mode
+- add uvl preview in text mode
+- add hub statistics
+- add pagination in user datasets table
+- add view profle user
+- Add script for update dependencies
+- Upgrade dependencies
+- Add script for SSL automatic generation
+- Increase nginx timeout
+- Improve Gunicorn timeout, workers and threads
+- Improve gunicorn deployment
+- Upgrade gunicorn deployment with logs
+- Improve nginx configuration
+- Add logs
+- Add delay to Zenodo upload files
+- Add chat system uvl
+- Implements statistics
+- Minor change in populate
+- Improve populate
+- Fix minor bug
+- Implement Team
+- Minor changes in populat
+- Improve populate with several UVl models
+- Fix bug in Zenodo
+- Add creation date in Users
+- Implements Download and Visualization Records
+- Improve UI
+- Improve uploading files
+- Improve dataset form
+- Delete temp folder by default
+- Check ORCID in main authors
+- Fix orcid field in dataset
+- Fix bug in profile
+- Implement UserProfile
+- Endpoint for dataset creation
+- Fix minor bug in Docker Swarm
+- Add Docker Swarm configuration
+- Preparation for API
+- Improve explorer
+- Improve UI explorer
+- Improve dataset detail
+- Implement topbar search
+- Improve explorer
+- Improve dataset searching visualization
+- Search by tags
+- Implement explorer (backend)
+- Update requirements
+- Improve download zip
+- Zenodo errors control
+- Implement download single file
+- Implement dataset download
+- Improve dataform control errors
+- Upgrade requirements with frozen versions
+- Improve production deployment with Gunicorn
+- Add cleanup to old images for Watchtower
+- Add restart always to watchtower
+- Add watchtower by default
+- Improve dataset form
+- Add flake8 as Python Linter
+- Fix minor bugs
+- Change restart policies
+- Improve README
+- Improve README
+- Improve README
+- Improve CD
+- Add latest tag in deployment
+- Add latest tag in deployment
+- Implement CD
+- Add the light logo
+- Add the light logo
+- Add the logo
+- Add favicon
+- Add cryptography package
+- Deployment in production
+- List dataset
+- Integration with Flamapy API
+- Move feature model files
+- Publish dataset
+- Finish upload files to Zenodo
+- Upload files to Zenodo
+- Improve visual UI
+- Add uvl version
+- Save feature models in backend
+- Upload dataset to Zenodo as deposition
+- Create dataset in backend
+- Add publication doi in form
+- Handler for dataset forms
+- Dataset form
+- Dataset functionality
+- App name as an environment
+- Implement DataSetForm
+- Improve models
+- Prepares the ground for the dataset module
+- Add custom error messages
+- New UI for login and sign up forms
+- Setting up UI
+- Basic login
+- Add secret key
+- Modeling
+- Add Zenodo API connection
+- Improve readme
+- Implements unit testing
+- Implements commits checker
+- Integrate fm characterization (labels)
+- Implements basic configuration in Flask
+- Add .env to .gitignore
+
+### Fix
+
+- change publish branch from 'main' to 'gh-pages'
+- change publish branch from 'gh-pages' to 'main'
+- enable force orphan for GitHub Pages deployment
+- remove NLTK and spaCy model download step
+- update CI configuration to use main branch
+- Change on route of modules
+- Updates README
+- Add test database env to test workflow
+- Improves test actions workflow
+- Improves GHActions
+- Fixes versions in Docker environment
+- Fixes bug with setup.py
+- Fixes linter worflow
+- Deletes unnecesary files
+- Fixes Selenium tests
+- Change venv to vagrant_venv
+- Fix .moduleignore
+- Solved playbook deprecated dependencies issue
+- Fix relative path in selenium file test
+- Fix bug with chmod in Docker entrypoints script
+- Fix missing MariaDB port in Docker entrypoints
+- Fix moduleignore
+- Change Vagrant box to jammy64
+- Fix make:module command
+- Fix loading scripts from modules
+- Fix bug in env local
+- Fix migrations
+- Fix issue with webhook in Vagrant
+- Normalize all the line endings
+- Add .gitattributes to enforce LF line endings
+- Fix base blueprints
+- Fix test workflow
+- Fix linter
+- Fix bug in requirements and seeder
+- Fix Linter
+- Fix linter
+- Fix bug in create dataset
+- Fix linter
+- Delete Flamapy model
+- Fix conflicts
+- Fix filename when exporting
+- Fix hubfiles paths
+- Adjust wait-for-db script to new Python image
+- error on using the alpine image to use sat solving in the backend
+- Fix linter
+- Fix bug in dataset seeder
+- Fix linter
+- Fix bug uploading dataset due to Zenodo disconnection
+- Fix linter
+- Fix bug in publication type with blank space between words
+- Fix merge conflicts
+- Fix Linter
+- Fix important bug in test connection to Zenodo
+- Fix linter
+- Fix Zenodo API url
+- selenium test for create new dataset
+- Fix linter
+- Fix dataset routes
+- Fix coverage
+- Fix merge conflicts
+- Fix migrations
+- Fix Linter
+- Fix webhook
+- Fix migrations
+- Fix webhook
+- Fix README
+- Fix webhook post route
+- Fix webhook
+- Fix ssl renew script
+- Fix SSL setup
+- Fix SSL setup
+- Fix SSL setup
+- Fix migrations
+- Fix profile summary
+- fix routes.py profile for Lint
+- Fix linter
+- Fix cookie counter
+- delete blank line
+- Update routes.py public for Python Lint Build
+- Update routes.py dataset for Python Lint Build
+- added SQLAlchemyEnum
+- Update models.py dataset for Python Lint Build
+- Fix bug in uploads folder in prod env
+- Fix bootstrap CDN to v5
+- Update blank lines and whitespaces in routes.py for python lint
+- Update routes.py for the review of the rest of the bugs for python lint
+- Update routes.py for Python Lint Build
+- Fix entrypoint in dev
+- Delete unnecesary file
+- Fix Render
+- Fix empty entrypoint
+- Fix Docker deployment in production
+- Fix Docker production deployment
+- Fix CI pytest (selenium conflict)
+- Fix Linter
+- Fix Selenium IDE test
+- Fix linter in Locust
+- Fix rosemary locust in local environment
+- Fix locust
+- Fix locust
+- Fix Locust
+- Fix Locust
+- Fix Rosemary commands
+- Fix rosemary commands with env var
+- Fix README official docs link
+- Fix bug in docker compose (production)
+- Fix bug in Dockerfile.prod
+- Fix README
+- Fix bug in production environments
+- Refactoring rosemary update command
+- Fix rosemary bug install with entrypoint
+- Fix rosemary
+- Fix minor bug in AuthSeeder
+- Fix bugs in Seeders
+- Fix linter errors
+- Fix CI
+- Fix bugs and refactoring
+- Fix bugs and refactoring
+- Fix bugs in rosemary commands
+- Fix .env file and init configs
+- Fix test CI
+- Fix test CI
+- Fix test CI
+- Fix test CI
+- Fix test CI
+- Fix test CI
+- Fix test CI
+- Fix test CI
+- Fix test CI
+- Fix test CI
+- Fix test CI
+- Fix bug in Rosemary
+- Fix flake8 style code problems
+- Fix DOI url
+- Fix nginx production configuration
+- Fix certbot script
+- Fix dependencies
+- Update dependencies
+- Fixes refactoring
+- Fixes dynamic loading of blueprints
+- Fix wait-for-db script
+- Fix update dependencies script
+- Update dependencies
+- Fix bug in keyword no default present value
+- Fix bug in keywords defalt no present
+- changing directories to resolve conflict
+- changing the directory structure
+- update directories
+- Fix login concurrence problem
+- Fix Zenodo upload files delay
+- Up to 100M in nginx request
+- Fix bug in populate script
+- Fix bug in populate
+- Fix download single file
+- Remove comments
+- FIx routes testing
+- Fix big bug in Gunicorn instance
+- Add removed code
+- Fix bugs in auth and login
+- Fix bug in auth module
+- Fix python alpine version
+- Fix bug in Gunicorn app instance
+- Fix minor bug in models
+- Fix bug in publication type
+- Fix bug in init.py
+- Fix minor bugs
+- Update CD
+- Update CD
+- Fix CD
+- Fix CD
+- Fix CD
+- Fix CD
+- Fix CD
+- Change password to access token
+- Fix CD
+- Fix CD
+- Fix name and description app
+- Fix certificate domain
+- Fix bug in nginx prod config
+- Fix UI bugs
+- Fix bug un Dataset model
+- Fix bug in model
+- Fix bug in ID forms
+- Fix visual bugs
+- Fix dataset form
+- Fix bug in modeling
+- Delete comments
+- Comment danger line in User
+- Fix minor bug in User model
+- Downgrade to Python 3.9 in CI
+- Change CI
+- Change CI
+- Change CI
+- Change CI
+- Change CI
+- Fix test suite
+- Fix test suite
+- Fix test suite
+- Fix test suite
+- Fix test suite
+- Fix test suite
+- Fix test suite
+- Fix test suite
+- Fix test suite
+- Fix SQLALCHEMY_DATABASE_URI
+- Fix unit testing
+- Fix gitignore
+
+### Refactor
+
+- create services and use instead repository
+- create services and repositories and replace in routes
+- create ZenodoService, create Dataset repositories and both applied to Dataset routes
+- refactor profile module
+- **core**: Setting up  migration system
+- **core**: Change organizational structure
