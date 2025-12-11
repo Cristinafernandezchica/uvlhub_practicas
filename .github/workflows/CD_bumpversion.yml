@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     name: "Bump version, update changelog and create release"
     steps:
-      # Paso inicial: salir limpio si el commit es de release
       - name: Skip if release commit
         run: |
-          if [[ "${{ github.event.head_commit.message }}" == chore(release):* ]]; then
+          if [[ "${{ github.event.head_commit.message }}" == chore\(release\):* ]]; then
             echo "Skipping bump job for release commit"
             exit 0
           fi
+
 
       - name: Check out
         uses: actions/checkout@v3
@@ -30,7 +30,7 @@ jobs:
         with:
           github_token: ${{ secrets.ADMIN_TOKEN }}
           debug: true
-          no_raise: true   # evita error si no hay commits elegibles
+          no_raise: true
 
       - name: Push changes and tags
         run: |
