@@ -7,28 +7,27 @@ on:
 
 jobs:
   bump_version:
+    if: "!startsWith(github.event.head_commit.message, 'bump:')"
     runs-on: ubuntu-latest
-    name: "Bump version and update changelog"
+    name: "Bump version and create changelog with commitizen"
     steps:
       - name: Check out
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          token: "${{ secrets.ADMIN_TOKEN }}"
-
+          token: "${{ secrets.ADMIN_TOKEN }}" 
       - id: cz
         name: Create bump and changelog
         uses: commitizen-tools/commitizen-action@master
         with:
-          github_token: ${{ secrets.ADMIN_TOKEN }}
+          github_token: ${{ secrets.ADMIN_TOKEN }}  
           debug: true
-          no_raise: true
-
       - name: Print Version
         run: echo "Bumped to version ${{ steps.cz.outputs.version }}"
-
-      - name: Push changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git push origin main --follow-tags
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.cz.outputs.version }}
+          name: Release ${{ steps.cz.outputs.version }}
+          body_path: CHANGELOG.md
+          token: ${{ secrets.ADMIN_TOKEN }} 
