@@ -1,4 +1,10 @@
 
+## 3.6.8 (2025-12-11)
+
+### Fix
+
+- change no_raise value to string in workflow
+
 ## 3.6.7 (2025-12-11)
 
 ### Fix
