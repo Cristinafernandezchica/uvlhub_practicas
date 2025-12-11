@@ -1,4 +1,10 @@
 
+## 3.6.3 (2025-12-11)
+
+### Fix
+
+- update CD_bumpversion.yml with no_raise option
+
 ## 3.6.2 (2025-12-11)
 
 ### Fix
