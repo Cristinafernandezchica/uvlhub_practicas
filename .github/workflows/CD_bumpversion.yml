@@ -7,38 +7,27 @@ on:
 
 jobs:
   bump_version:
+    if: "!startsWith(github.event.head_commit.message, 'bump:')"
     runs-on: ubuntu-latest
+    name: "Bump version and create changelog with commitizen"
     steps:
-      - name: Skip if release commit
-        run: |
-          if [[ "${{ github.event.head_commit.message }}" == 'chore(release):'* ]]; then
-            echo "Skipping bump job for release commit"
-            exit 0
-          fi
-
       - name: Check out
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          token: "${{ secrets.ADMIN_TOKEN }}"
-
-      - name: Install Commitizen
-        run: pip install commitizen
-
-      - name: Bump version
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          cz bump --yes --changelog || true
-
-      - name: Push changes and tags
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          if [[ -n "$(git status --porcelain)" ]]; then
-            git push origin main
-            git push origin --tags
-          else
-            echo "No changes to push (no bump needed)."
-          fi
-
+          token: "${{ secrets.ADMIN_TOKEN }}" 
+      - id: cz
+        name: Create bump and changelog
+        uses: commitizen-tools/commitizen-action@master
+        with:
+          github_token: ${{ secrets.ADMIN_TOKEN }}  
+          debug: true
+      - name: Print Version
+        run: echo "Bumped to version ${{ steps.cz.outputs.version }}"
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.cz.outputs.version }}
+          name: Release ${{ steps.cz.outputs.version }}
+          body_path: CHANGELOG.md
+          token: ${{ secrets.ADMIN_TOKEN }} 
