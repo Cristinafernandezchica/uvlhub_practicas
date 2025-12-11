@@ -1,4 +1,10 @@
 
+## 3.7.0 (2025-12-11)
+
+### Feat
+
+- separate bump and release
+
 ## 3.6.9 (2025-12-11)
 
 ### Fix
