@@ -1,4 +1,14 @@
 
+## 3.8.2 (2025-12-11)
+
+### Fix
+
+- update CD_bumpversion.yml
+- update CD_release.yml
+- update CD_bumpversion.ymlf
+- update CD_bumpversion.ymlf
+- bump version
+
 ## 3.8.1 (2025-12-11)
 
 ### Fix
