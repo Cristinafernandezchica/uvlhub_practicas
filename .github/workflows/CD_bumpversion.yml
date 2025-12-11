@@ -29,7 +29,7 @@ jobs:
         with:
           github_token: ${{ secrets.ADMIN_TOKEN }}
           debug: true
-          no_raise: true
+          no_raise: "true"
 
       - name: Push changes and tags
         run: |
