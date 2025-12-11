@@ -1,4 +1,10 @@
 
+## 3.6.2 (2025-12-11)
+
+### Fix
+
+- skip bump job for bump commits
+
 ## 3.6.1 (2025-12-11)
 
 ### Fix
