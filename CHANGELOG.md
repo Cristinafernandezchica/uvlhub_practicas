@@ -1,4 +1,11 @@
 
+## 3.6.6 (2025-12-11)
+
+### Fix
+
+- regex for release commit check in workflow
+- update workflow to bump version and create release
+
 ## 3.6.5 (2025-12-11)
 
 ### Fix
