@@ -1,4 +1,10 @@
 
+## 3.5.0 (2025-12-11)
+
+### Feat
+
+- update CD_bumpversion.yml
+
 ## 3.4.0 (2025-12-11)
 
 ### Feat
