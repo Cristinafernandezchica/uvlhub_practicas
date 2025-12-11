@@ -1,4 +1,10 @@
 
+## 3.6.5 (2025-12-11)
+
+### Fix
+
+- update .cz.toml for versioning and changelog
+
 ## 3.6.4 (2025-12-11)
 
 ### Fix
