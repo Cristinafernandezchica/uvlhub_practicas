@@ -7,16 +7,10 @@ on:
 
 jobs:
   bump_version:
+    # 👇 este if evita que se ejecute si el commit lo hizo el bot
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
-    name: "Bump version and update changelog"
     steps:
-      - name: Skip if release commit
-        run: |
-          if [[ "${{ github.event.head_commit.message }}" == 'chore(release):'* ]]; then
-            echo "Skipping bump job for release commit"
-            exit 0
-          fi
-
       - name: Check out
         uses: actions/checkout@v3
         with:
