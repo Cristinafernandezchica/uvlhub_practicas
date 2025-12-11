@@ -1,4 +1,10 @@
 
+## 3.8.0 (2025-12-11)
+
+### Feat
+
+- separate release y bump
+
 ## 3.7.0 (2025-12-11)
 
 ### Feat
